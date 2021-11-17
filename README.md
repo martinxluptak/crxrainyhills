@@ -1,6 +1,9 @@
-# crxrainyhills
-CRXMarkets challenge RainyHills.pdf
+# CRXRainyHills
 
+This program implements a solution for the CRX Markets Java EE coding exercise specified by "RainyHills.pdf."\
+The solution uses Spring Boot and can be run in Docker.
+
+![Rainy Hills assignment snippet](./static/rainyhills-snippet.jpg)
 
 ## Dependencies
 The application is built with JDK 17 and runs on JRE 17. 

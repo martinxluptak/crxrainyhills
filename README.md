@@ -29,6 +29,19 @@ $ docker build --build-arg JAR_FILE=build/libs/\*.jar -t luptak/crx-rainy-hills-
 $ docker run -p 8080:8080 luptak/crx-rainy-hills-docker
 ```
 
+## How to use
+Send a GET request to URI `/rainy` specifying the height profile as a comma-separated integer list in a GET parameter `surfaces`.\
+Here is an example with the application running on `localhost:8080`:
+
+```sh
+$ curl -X GET http://localhost:8080/rainy \
+       -G -d "surfaces=8,0,8"
+```
+The response is a single integer:
+```sh
+8
+```
+
 ## Complexity
 The application uses `RainCalculatorImpl` class which calculates the result in linear time `O(n)`
 and constant memory usage `O(1)`.

@@ -25,3 +25,7 @@ $ docker build --build-arg JAR_FILE=build/libs/\*.jar -t luptak/crx-rainy-hills-
 # Run the docker image as a web server on port 8080 (Spring Boot default).
 $ docker run -p 8080:8080 luptak/crx-rainy-hills-docker
 ```
+
+## Complexity
+The application uses `RainCalculatorImpl` class which calculates the result in linear time `O(n)`
+and constant memory usage `O(1)`.

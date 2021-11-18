@@ -37,9 +37,9 @@ Here is an example with the application running on `localhost:8080`:
 $ curl -X GET http://localhost:8080/rainy \
        -G -d "surfaces=8,0,8"
 ```
-The response is a single integer:
-```sh
-8
+The response is a JSON object with a property "volume" and the result integer value:
+```json
+{"volume":8}
 ```
 
 ## Running as a console application

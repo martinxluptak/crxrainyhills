@@ -42,6 +42,18 @@ The response is a single integer:
 8
 ```
 
+## Running as a console application
+The application JAR can be used without any networking through a simple command line interface. Additionally, by disabling logging
+and additional Spring messages it can be piped with your own scripts.
+Just supply a comma-separated integer list as a command line argument when running the jar file (in this case `1,2,4,7,8`):
+```sh
+$ java -jar \
+     -Dspring.main.web-application-type=NONE \
+     -Dlogging.level.root=OFF \
+     -Dspring.main.banner-mode=off \
+     crxrainyhills.jar 1,2,4,7,8
+```
+
 ## Complexity
 The application uses `RainCalculatorImpl` class which calculates the result in linear time `O(n)`
 and constant memory usage `O(1)`.
